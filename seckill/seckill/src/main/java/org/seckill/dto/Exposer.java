@@ -38,6 +38,11 @@ public class Exposer {
         this.seckillId = seckillId;
     }
 
+    public Exposer(boolean exposed, long seckillId) {
+        this.exposed = exposed;
+        this.seckillId = seckillId;
+    }
+
     public String getMd5() {
         return md5;
     }
@@ -84,5 +89,17 @@ public class Exposer {
 
     public void setEnd(long end) {
         this.end = end;
+    }
+
+    @Override
+    public String toString() {
+        return "Exposer{" +
+                "md5='" + md5 + '\'' +
+                ", exposed=" + exposed +
+                ", seckillId=" + seckillId +
+                ", now=" + now +
+                ", start=" + start +
+                ", end=" + end +
+                '}';
     }
 }
